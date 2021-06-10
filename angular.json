@@ -24,12 +24,42 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/",
+                "ignore": ["inline-locale-files", "additional-locale", "locale"]
+              },
+              {
+                "glob": "fr.html",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/inline-locale-files/",
+                "output": "/assets/inline-locale-files/"
+              },
+              {
+                "glob": "fr.properties",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/additional-locale/",
+                "output": "/assets/additional-locale/"
+              },
+              {
+                "glob": "viewer.properties",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale/fr/",
+                "output": "/assets/locale/fr/"
+              },
+              {
+                "glob": "locale.properties",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale/",
+                "output": "/assets/locale/"
+              }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["src/styles.css"],
+            "scripts": [
+              {
+                "inject": true,
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/pdf.worker-2.9.149-es5.js"
+              },
+              "src/assets/pdf.worker-2.9.149.es5.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -101,13 +131,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }
