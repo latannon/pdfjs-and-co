@@ -23,7 +23,7 @@
     "bootstrap": "^5.0.1",
     "ng2-pdf-viewer": "^7.0.1",
     "ngx-extended-pdf-viewer": "^9.0.1",
-    "pdfjs-dist": "^2.8.335",
+    "pdfjs-dist": "^2.7.570",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
