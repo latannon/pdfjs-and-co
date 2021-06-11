@@ -60,6 +60,15 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "es5": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "tsConfig": "./tsconfig.es5.json"
             }
           },
           "defaultConfiguration": "production"
@@ -72,6 +81,9 @@
             },
             "development": {
               "browserTarget": "pdfjs-exploration:build:development"
+            },
+            "es5": {
+              "browserTarget": "pdfjs-exploration:build:es5"
             }
           },
           "defaultConfiguration": "development"
